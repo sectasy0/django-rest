@@ -32,7 +32,7 @@ python manage.py createsuperuser
 #### Get authentication token
 
 ```sh
-http POST :8000/api/v1/auth/token/login username=admin password=test123
+http POST https://restapp-intv.herokuapp.com/api/v1/auth/token/login username=admin password=test123
 ```
 
 ```
@@ -50,7 +50,7 @@ Content-Type: application/json
 #### Upload an image
 
 ```sh
-http --form PUT :8000/api/v1/image/upload/ "Authorization: token <your token here>" format="jpg" file@path/to/file.png
+http --form PUT https://restapp-intv.herokuapp.com/api/v1/image/upload/ "Authorization: token <your token here>" format="jpg" file@path/to/file.png
 ```
 
 ```sh
@@ -68,7 +68,7 @@ Content-Type: application/json
 #### Get your images
 
 ```sh
-http GET :8000/api/v1/images/ "Authorization: token <your token here"
+http GET https://restapp-intv.herokuapp.com/api/v1/images/ "Authorization: token <your token here"
 ```
 
 ```sh
@@ -90,7 +90,7 @@ Content-Type: application/json
 #### Get one image
 
 ```sh
-http GET :8000/api/v1/image/<image_id> "Authorization: token <your token here"
+http GET https://restapp-intv.herokuapp.com/api/v1/image/<image_id> "Authorization: token <your token here"
 ```
 
 ```sh
@@ -109,7 +109,7 @@ Content-Type: application/json
 #### Create expiration link
 
 ```sh
-http PUT :8000/api/v1/image/shared/ "Authorization: token <your token here>" expires=500 protected_data=test1234
+http PUT https://restapp-intv.herokuapp.com/api/v1/image/shared/ "Authorization: token <your token here>" expires=500 protected_data=test1234
 ```
 
 ```sh
@@ -130,7 +130,7 @@ Content-Type: application/json
 #### Get your links
 
 ```sh
-http GET :8000/api/v1/image/shared/ "Authorization: token <your token here>" expires=500 protected_data=test1234
+http GET https://restapp-intv.herokuapp.com/api/v1/image/shared/ "Authorization: token <your token here>" expires=500 protected_data=test1234
 ```
 
 ```sh
@@ -151,7 +151,7 @@ http GET :8000/api/v1/image/shared/ "Authorization: token <your token here>" exp
 #### Get link
 
 ```sh
-http GET :8000/api/v1/image/shared/2f22e15ba98e "Authorization: token <your token here>"
+http GET https://restapp-intv.herokuapp.com/api/v1/image/shared/2f22e15ba98e "Authorization: token <your token here>"
 ```
 
 ```sh
