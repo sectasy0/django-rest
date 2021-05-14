@@ -8,6 +8,6 @@ from django.contrib.auth.models import User
 
 class Link(Model):
     value = CharField(max_length=25, blank=False, null=False)
-    expires = DateTimeField(default=now())
+    expires = DateTimeField(default=now)
     protected_data = TextField()
     user = ForeignKey(User, on_delete=CASCADE)
