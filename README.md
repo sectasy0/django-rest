@@ -22,6 +22,11 @@ python manage.py runserver
 
 ```
 
+#### Create superuser
+```sh
+python manage.py createsuperuser
+```
+
 ## Usage example
 
 #### Get authentication token
